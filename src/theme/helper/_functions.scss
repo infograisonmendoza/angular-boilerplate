@@ -1,0 +1,21 @@
+@use "sass:map";
+
+@function negativity-map($map) {
+  $result: ();
+
+  @each $key, $value in $map {
+    @if $key !=0 {
+      $result: map.merge($result, ("-" + $key: (-$value)));
+    }
+  }
+
+  @return $result;
+}
+
+@function map-collect($maps...) {
+    $collection: ();
+    @each $map in $maps {
+        $collection: map.merge($collection, $map);
+    }
+    @return $collection;
+}

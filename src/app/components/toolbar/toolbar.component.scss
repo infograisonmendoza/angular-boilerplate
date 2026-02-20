@@ -1,0 +1,31 @@
+ion-toolbar {
+  --background: var(--item);
+  --color: var(--text);
+
+//   --border-color: #f24aec;
+//   --border-width: 4px 0;
+//   --border-style: double;
+
+  --min-height: 60px;
+//   --padding-top: 12px;
+//   --padding-bottom: 12px;
+  --padding-start: 16px;
+  --padding-end: 16px;
+}
+
+ion-title {
+  color: var(--text);
+  font-size: 14px;
+}
+
+ion-icon {
+    color: var(--text);
+    font-size: 24px;
+}
+
+.searchBar {
+//   background: var(--accent);
+  padding: 8px 16px;
+  margin-right: 16px;
+  border-radius: 24px;
+}

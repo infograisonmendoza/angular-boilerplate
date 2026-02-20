@@ -4,12 +4,14 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "lint": "ng lint"
+    "ionic": "ionic",
+    "start": "npx ionic serve",
+    "build": "ionic build",
+    "ios": "cap open ios",
+    "android": "cap open android",
+    "prod": "npx ionic build --configuration=production && cap sync android && npm run android",
+    "dev": "npx ionic build --configuration=development && cap sync android && npm run android",
+    "prodIpa": "npx ionic build --configuration=development && cap sync ios && npm run ios"
   },
   "private": true,
   "dependencies": {

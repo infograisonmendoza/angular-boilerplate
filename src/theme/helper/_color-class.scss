@@ -1,0 +1,20 @@
+// @use "sass:meta";
+@use '../variables.scss' as variables;
+
+$utilities: (
+    'background-color': (
+        property: background-color,
+        class: bg,
+        values: variables.$colors,
+    ),
+    'border-color': (
+        property: border-color,
+        class: bc,
+        values: variables.$colors ,
+    ),
+    'color': (
+        property: color,
+        class: color,
+        values: variables.$colors,
+    ),
+) !default;

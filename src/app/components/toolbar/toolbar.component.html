@@ -1,0 +1,31 @@
+<ion-header [translucent]="translucent">
+  <ion-toolbar>
+    @if (iconStart) {
+      <ion-button 
+        (click)="buttonClick('start')"
+        slot="start" 
+        color="accent" 
+        fill="clear"
+      >
+        <ion-icon slot="icon-only" [name]="iconStartName"></ion-icon>
+      </ion-button>
+    }
+
+    @if (mode === 'search') {
+      <div class="searchBar">{{ placeholder }}</div>
+    } @else {
+      <ion-title>{{ title }}</ion-title>
+    }
+
+    @if (iconEnd) {
+      <ion-button 
+        (click)="buttonClick('end')" 
+        slot="end" 
+        color="accent" 
+        fill="clear"
+      >
+        <ion-icon slot="icon-only" [name]="iconEndName"></ion-icon>
+      </ion-button>
+    }
+  </ion-toolbar>
+</ion-header>
